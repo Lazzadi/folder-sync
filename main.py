@@ -13,4 +13,4 @@ import shutil
 
 synchronise('/home/l/Documents/repos/folder-sync/folder-sync/Source', '/home/l/Documents/repos/folder-sync/folder-sync/Replica')
 
-# print(scanFolder('/home/l/Documents/repos/folder-sync/folder-sync/Source'))
+# scanFolder('/home/l/Documents/repos/folder-sync/folder-sync/Source')

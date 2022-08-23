@@ -18,27 +18,50 @@ def timeModified(path):
 def scanFolder(folder):
     content = {}
     for path, _, fileList in os.walk(folder):
-        for fileName in fileList:
-            time = str(timeModified(path))
-            content[fileName] = time
+            for fileName in fileList:
+                filePath = path + '/' + fileName
+                time = str(timeModified(filePath))
+                content[filePath] = [fileName, time]
+                # print(str(content.keys()))
     return content
 
 # #Function copies changed files from Source to Replica
 # Three situations: New files, deleting files and changing files
 def synchronise(folderSource, folderReplica):
+    
     contentSource = scanFolder(folderSource)
     contentReplica = scanFolder(folderReplica)
-    for fileNameSource, dateModifiedSource in contentSource.items():
+    
+    for filePathSource, dataSource in contentSource.items():
         found = False
-        for fileNameReplica, dateModifiedReplica in contentReplica.items():
+        fileNameSource = dataSource[0]
+        dateModifiedSource = dataSource[1]
+        for filePathReplica, dataReplica in contentReplica.items():
+            fileNameReplica = dataReplica[0]
+            dateModifiedReplica = dataReplica[1]
             if(fileNameSource == fileNameReplica):
                 found = True
                 if(dateModifiedSource != dateModifiedReplica):
-                    # print (folderSource + '/' + fileNameSource, folderReplica)
-                    shutil.copy2(folderSource + '/' + fileNameSource, folderReplica)
+                    shutil.copy2(filePathSource, folderReplica)
         if found == False:
-            pass
-            shutil.copy2(folderSource + '/' + fileNameSource, folderReplica)
+            shutil.copy2(filePathSource, folderReplica)
+    
+    contentReplica = scanFolder(folderReplica)
+    
+    for filePathReplica, dataReplica in contentReplica.items():
+        fileNameReplica = dataReplica[0]
+        found = False
+        for dataSource in contentSource.values():
+            fileNameSource = dataSource[0]
+            if fileNameReplica == fileNameSource:
+                found = True
+                # print(found)
+        if found == False:
+            os.remove(filePathReplica)
+    
+
+
+
 
 
 
@@ -53,6 +76,7 @@ def synchronise(folderSource, folderReplica):
     #if it has a different timestamp find file in replica and delete it then add file in source to replica
     #if it can't be found in Replica add file from source to replica
     #to check for deleted items we will look in replica and compare to Source. If we have a file in Replica that is not in source, we remove that file from replica
+    #maybe sort after last modified date. Save last modified date from latest sync iteration in a temp variable and only check until final . 
 ###                 
 
 # #Function writes changes in log folder
