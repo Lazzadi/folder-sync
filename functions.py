@@ -13,11 +13,15 @@ def timeModified(path):
     time = datetime.datetime.fromtimestamp(timestamp)
     return(time)
 
-# #Function should create a dictionary with Key:file-name, value:date modified
-# def scanFolder(folder):
-#     list = os.listdir(folder)
-#     list.sort()
-#     return list
+#Function should create a dictionary with Key:file-name, value:date modified
+def scanFolder(folder):
+    content = {}
+    for path, _, fileList in os.walk(folder):
+        for fileName in fileList:
+            print(path + fileName)
+            time = str(timeModified(path))
+            content[fileName] = time
+    return content
 
 # #Function writes changes in log folder
 # def logFolder(folder):
