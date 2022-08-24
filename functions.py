@@ -19,14 +19,11 @@ def scanFolder(folder):
     content = {}
     for path, _, fileList in os.walk(folder):
             for fileName in fileList:
-                filePath = path + '/' + fileName
-                time = str(timeModified(filePath))
-                content[filePath] = [fileName, time]
-                # print(str(content.keys()))
+                time = str(timeModified(os.path.join(path, fileName)))
+                content[path] = [fileName, time]
     return content
 
-# #Function copies changed files from Source to Replica
-# Three situations: New files, deleting files and changing files
+
 def synchronise(folderSource, folderReplica):
     
     contentSource = scanFolder(folderSource)
@@ -45,6 +42,7 @@ def synchronise(folderSource, folderReplica):
                     shutil.copy2(filePathSource, folderReplica)
         if found == False:
             shutil.copy2(filePathSource, folderReplica)
+            os.mkdir(folderReplica,'test')
     
     contentReplica = scanFolder(folderReplica)
     
