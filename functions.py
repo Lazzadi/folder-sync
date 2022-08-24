@@ -25,7 +25,7 @@ def scanFolder(folder):
     return content
 
 
-def synchronise(folderSource, folderReplica):
+def synchronise(folderSource, folderReplica, logPath):
     
     contentSource = scanFolder(folderSource)
     contentReplica = scanFolder(folderReplica)
@@ -56,68 +56,48 @@ def synchronise(folderSource, folderReplica):
                     except:
                         pass
                     shutil.copy2(filePathSource, folderReplica + extension[0])
+                    message = str(datetime.datetime.now()) + ': ' + fileNameReplica + ' was modified in ' + folderReplica + extension[0]
+                    print(message)
+                    logFolder(logPath, message)
 
               
         if found == False:
             extensionRegex = re.compile(r'(?<=Source).*$')
             extension = extensionRegex.findall(shortPathSource)
-            print(extension)
             try:
                 os.makedirs(folderReplica + extension[0])
             except:
                 pass
             shutil.copy2(filePathSource, folderReplica + extension[0])
+            message = str(datetime.datetime.now()) + ': ' + fileNameSource + ' was created in ' + folderReplica + extension[0]
+            print(message)
+            logFolder(logPath, message)
 
-
-
-
-
-
-    
-    # for filePathSource, dataSource in contentSource.items():
-    #     found = False
-    #     fileNameSource = dataSource[0]
-    #     dateModifiedSource = dataSource[1]
-    #     for filePathReplica, dataReplica in contentReplica.items():
-    #         fileNameReplica = dataReplica[0]
-    #         dateModifiedReplica = dataReplica[1]
-    #         if(fileNameSource == fileNameReplica):
-    #             found = True
-    #             if(dateModifiedSource != dateModifiedReplica):
-    #                 shutil.copy2(os.path.join(filePathSource, fileNameSource), folderReplica)
-    #     if found == False:
-    #         shutil.copy2(os.path.join(filePathSource, fileNameSource), folderReplica)
-            
-    
-    # contentReplica = scanFolder(folderReplica)
-    
-    # for filePathReplica, dataReplica in contentReplica.items():
-    #     fileNameReplica = dataReplica[0]
-    #     found = False
-    #     for dataSource in contentSource.values():
-    #         fileNameSource = dataSource[0]
-    #         if fileNameReplica == fileNameSource:
-    #             found = True
-    #             # print(found)
-    #     if found == False:
-    #         os.remove(filePathReplica)
+    #There are going to be changes in replica so we scan it again before removing any files
+    contentReplica = scanFolder(folderReplica)
     
 
+    #removes from replica files no longer in  source
+    for filePathReplica, dataReplica in contentReplica.items():
+        fileNameReplica = dataReplica[0]
+        found = False
+        for dataSource in contentSource.values():
+            fileNameSource = dataSource[0]
+            if fileNameReplica == fileNameSource:
+                found = True
+        if found == False:
+            os.remove(filePathReplica)
+            message = str(datetime.datetime.now()) + ': ' + fileNameReplica + ' was deleted from ' + filePathReplica
+            print(message)
+            logFolder(logPath, message)
 
-
-
-
-
-        
 
 
 # #Function writes changes in log folder
-# def logFolder(folder):
-#     os.chdir(folder)
-#     log = open('log.txt', 'a')
-#     # log.write what changes were made to source
-#     log.write('Hello World')
-#     log.close()
-
+def logFolder(path, message):
+    os.chdir(path)
+    log = open('log.txt', 'a')
+    log.write('\n' + message)
+    log.close()
 
 

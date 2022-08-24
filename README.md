@@ -20,3 +20,5 @@ TODO Make regex applicable regardless of the name of the folder
 TODO: If we have a file in Replica that is not in source, we remove that file from replica
 
 TODO: maybe sort after last modified date. Save last modified date from latest sync iteration in a temp variable and only check until final .                
+
+TODO: Synchronise moving files internally

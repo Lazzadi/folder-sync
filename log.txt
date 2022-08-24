@@ -1,0 +1,17 @@
+
+2022-08-24 22:39:53.014795: 2.txt was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica
+2022-08-24 22:39:53.016940: 1.txt was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica
+2022-08-24 22:39:53.019177: Adrian_Lazarec.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri
+2022-08-24 22:39:53.020070: Adrian Lazarec - Fortech Bootcamp.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri
+2022-08-24 22:39:53.027543: Python Programming: An Introduction to Computer Science .pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-24 22:39:53.051394: progit.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-24 22:39:53.068417: Refactoring: Improving the Design of Existing Code.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-24 22:39:53.073367: 20207520236178Algorithms-to-Live-By.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-24 22:39:53.094891: pdfcoffee.com_automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2015pdf-pdf-free.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-24 22:39:53.098208: 104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-24 22:39:53.098752: .~lock.Test-Tasks-Python-C-C.docx# was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-24 22:39:53.099870: Test-Tasks-Python-C-C.docx was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-24 22:39:53.168953: Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-24 22:39:53.197864: dont-make-me-think-revisited.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-24 22:39:53.203396: clean_code.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-24 22:39:53.424775: Godel, Escher, Bach: An Eternal Golden Braid.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2

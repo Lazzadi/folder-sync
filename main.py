@@ -7,13 +7,14 @@ import re
 
 source = '/home/l/Documents/repos/folder-sync/folder-sync/Source'
 replica = '/home/l/Documents/repos/folder-sync/folder-sync/Replica'
+logPath = '/home/l/Documents/repos/folder-sync/folder-sync'
 
 # print(timeModified('/home/l/Documents/repos/folder-sync/folder-sync/Source/log.txt'))
 
 
 # scanFolder(source)
 
-synchronise(source , replica)
+synchronise(source , replica, logPath)
 
 # print(scanFolder('/home/l/Documents/repos/folder-sync/folder-sync/Source'))
 # print(x.keys())
@@ -31,4 +32,7 @@ synchronise(source , replica)
 # temp = source + '/Bookss/vice/test'
 # os.makedirs(source + '/Bookss/vice/test')
 # shutil.copy2(source + '/Bookss/2.txt', replica + '/Bookss/2.txt')
+
+
+
 
