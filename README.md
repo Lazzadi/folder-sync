@@ -22,3 +22,7 @@ TODO: If we have a file in Replica that is not in source, we remove that file fr
 TODO: maybe sort after last modified date. Save last modified date from latest sync iteration in a temp variable and only check until final .                
 
 TODO: Synchronise moving files internally
+
+    Maybe make a regex function to deal with that
+
+TODO: Synchronise creating empty folders. At the moment empty folders are not recreated in Replica but they will be created once empty folder is populated with a file

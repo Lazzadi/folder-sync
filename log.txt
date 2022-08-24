@@ -1,17 +1,49 @@
 
-2022-08-24 22:39:53.014795: 2.txt was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica
-2022-08-24 22:39:53.016940: 1.txt was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica
-2022-08-24 22:39:53.019177: Adrian_Lazarec.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri
-2022-08-24 22:39:53.020070: Adrian Lazarec - Fortech Bootcamp.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri
-2022-08-24 22:39:53.027543: Python Programming: An Introduction to Computer Science .pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
-2022-08-24 22:39:53.051394: progit.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
-2022-08-24 22:39:53.068417: Refactoring: Improving the Design of Existing Code.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
-2022-08-24 22:39:53.073367: 20207520236178Algorithms-to-Live-By.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
-2022-08-24 22:39:53.094891: pdfcoffee.com_automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2015pdf-pdf-free.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
-2022-08-24 22:39:53.098208: 104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
-2022-08-24 22:39:53.098752: .~lock.Test-Tasks-Python-C-C.docx# was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
-2022-08-24 22:39:53.099870: Test-Tasks-Python-C-C.docx was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
-2022-08-24 22:39:53.168953: Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
-2022-08-24 22:39:53.197864: dont-make-me-think-revisited.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
-2022-08-24 22:39:53.203396: clean_code.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
-2022-08-24 22:39:53.424775: Godel, Escher, Bach: An Eternal Golden Braid.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:01:02.725591: 2.txt was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica
+2022-08-25 00:01:02.726854: Adrian_Lazarec.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri
+2022-08-25 00:01:02.727799: Adrian Lazarec - Fortech Bootcamp.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri
+2022-08-25 00:01:02.734246: Python Programming: An Introduction to Computer Science .pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:01:02.822211: progit.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:01:02.869063: pdfcoffee.com_automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2015pdf-pdf-free.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:01:02.870084: .~lock.Test-Tasks-Python-C-C.docx# was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:01:02.870982: Test-Tasks-Python-C-C.docx was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:01:02.982202: Godel, Escher, Bach: An Eternal Golden Braid.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:01:03.215930: 20207520236178Algorithms-to-Live-By.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:01:03.260033: 104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:01:03.643994: Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:01:03.765002: dont-make-me-think-revisited.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:01:03.775690: clean_code.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:01:03.776042: 1.txt was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:02:38.382664: 2.txt was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica
+2022-08-25 00:02:38.384023: Adrian_Lazarec.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri
+2022-08-25 00:02:38.384706: Adrian Lazarec - Fortech Bootcamp.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri
+2022-08-25 00:02:38.392694: Python Programming: An Introduction to Computer Science .pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:02:38.410178: progit.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:02:38.426492: pdfcoffee.com_automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2015pdf-pdf-free.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:02:38.427028: .~lock.Test-Tasks-Python-C-C.docx# was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:02:38.427542: Test-Tasks-Python-C-C.docx was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:02:38.468401: Godel, Escher, Bach: An Eternal Golden Braid.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books
+2022-08-25 00:02:38.478301: 20207520236178Algorithms-to-Live-By.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:02:38.481123: 104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:02:38.536399: Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:02:38.660425: dont-make-me-think-revisited.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:02:38.672894: clean_code.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:02:38.673700: 1.txt was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2
+2022-08-25 00:02:58.703267: 2.txt was modified in /home/l/Documents/repos/folder-sync/folder-sync/Replica
+2022-08-25 00:03:08.713635: 2.txt was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/2.txt
+2022-08-25 00:07:19.051631: new file.pdf was created in /home/l/Documents/repos/folder-sync/folder-sync/Replica/new folder
+2022-08-25 00:07:49.091317: Adrian_Lazarec.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri/Adrian_Lazarec.pdf
+2022-08-25 00:07:49.091755: Adrian Lazarec - Fortech Bootcamp.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/CV-uri-20220730T125802Z-001/CV-uri/Adrian Lazarec - Fortech Bootcamp.pdf
+2022-08-25 00:07:49.093883: new file.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/new folder/new file.pdf
+2022-08-25 00:07:49.094319: Python Programming: An Introduction to Computer Science .pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Python Programming: An Introduction to Computer Science .pdf
+2022-08-25 00:07:49.097047: progit.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/progit.pdf
+2022-08-25 00:07:49.098148: pdfcoffee.com_automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2015pdf-pdf-free.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/pdfcoffee.com_automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2015pdf-pdf-free.pdf
+2022-08-25 00:07:49.098284: .~lock.Test-Tasks-Python-C-C.docx# was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/.~lock.Test-Tasks-Python-C-C.docx#
+2022-08-25 00:07:49.098385: Test-Tasks-Python-C-C.docx was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Test-Tasks-Python-C-C.docx
+2022-08-25 00:07:49.101722: Godel, Escher, Bach: An Eternal Golden Braid.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Godel, Escher, Bach: An Eternal Golden Braid.pdf
+2022-08-25 00:07:49.102580: 20207520236178Algorithms-to-Live-By.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2/20207520236178Algorithms-to-Live-By.pdf
+2022-08-25 00:07:49.103013: 104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2/104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf
+2022-08-25 00:07:49.111619: Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2/Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf
+2022-08-25 00:07:49.114237: dont-make-me-think-revisited.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2/dont-make-me-think-revisited.pdf
+2022-08-25 00:07:49.115079: clean_code.pdf was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2/clean_code.pdf
+2022-08-25 00:07:49.115147: 1.txt was deleted from /home/l/Documents/repos/folder-sync/folder-sync/Replica/Books/Books 2/1.txt

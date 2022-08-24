@@ -37,7 +37,7 @@ def synchronise(folderSource, folderReplica, logPath):
         
         fileNameSource = dataSource[0] # taking file name from content
         dateModifiedSource = dataSource[1] # taking date modified from content
-        shortPathSource = dataSource[2]
+        shortPathSource = dataSource[2] # taking file path without file name
         found = False
 
         for filePathReplica, dataReplica in contentReplica.items():
@@ -45,6 +45,7 @@ def synchronise(folderSource, folderReplica, logPath):
             dateModifiedReplica = dataReplica[1]
             shortPathReplica = dataReplica[2]
 
+            #Checking if file exists anywhere in folder structure
             if(fileNameSource == fileNameReplica):
                 pass
                 found = True
@@ -77,7 +78,7 @@ def synchronise(folderSource, folderReplica, logPath):
     contentReplica = scanFolder(folderReplica)
     
 
-    #removes from replica files no longer in  source
+    #removes from replica files that are no longer in  source
     for filePathReplica, dataReplica in contentReplica.items():
         fileNameReplica = dataReplica[0]
         found = False
@@ -91,6 +92,7 @@ def synchronise(folderSource, folderReplica, logPath):
             print(message)
             logFolder(logPath, message)
 
+    #TODO: function that checks if files have been moved internally
 
 
 # #Function writes changes in log folder
