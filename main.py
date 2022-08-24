@@ -11,6 +11,16 @@ import shutil
 # print(scanFolder('/home/l/Documents'))
 # print(timeModified('/home/l/Documents/repos/folder-sync/folder-sync/Source/log.txt'))
 
-synchronise('/home/l/Documents/repos/folder-sync/folder-sync/Source', '/home/l/Documents/repos/folder-sync/folder-sync/Replica')
+# synchronise('/home/l/Documents/repos/folder-sync/folder-sync/Source', '/home/l/Documents/repos/folder-sync/folder-sync/Replica')
 
-# scanFolder('/home/l/Documents/repos/folder-sync/folder-sync/Source')
+print(scanFolder('/home/l/Documents/repos/folder-sync/folder-sync/Source'))
+# print(x.keys())
+# folder = os.walk('/home/l/Documents/repos/folder-sync/folder-sync/Source')
+
+# for x, y, z in folder:
+#     print('*************')
+#     print(x)
+#     print(y)
+#     print(z)
+#     print('**************8')
+

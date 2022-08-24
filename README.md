@@ -11,6 +11,6 @@ Requirements:
 
     • Folder paths, synchronization interval and log file path should be provided using the command line arguments.
 
-Latest version of script copies, modifies and deletes all files from Source folder, including those in subfolders. However, I still need to create the subfolders in the replica folder, which are not currently created. Maybe use recursion on any folder I find??
+Latest version of script copies, modifies and deletes all files from Source folder, including those in subfolders. However, I still need to create the subfolders in the replica folder, which are not currently created. Maybe use recursion on any folder I find?? Or just call it a feature and move on.
 
 Other TODO's can be found in the main file
