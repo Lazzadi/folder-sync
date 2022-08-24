@@ -14,3 +14,9 @@ Requirements:
 Latest version of script copies, modifies and deletes all files from Source folder, including those in subfolders. However, I still need to create the subfolders in the replica folder, which are not currently created. Maybe use recursion on any folder I find?? Or just call it a feature and move on.
 
 Other TODO's can be found in the main file
+
+TODO Make regex applicable regardless of the name of the folder
+
+TODO: If we have a file in Replica that is not in source, we remove that file from replica
+
+TODO: maybe sort after last modified date. Save last modified date from latest sync iteration in a temp variable and only check until final .                

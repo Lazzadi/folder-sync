@@ -3,17 +3,19 @@ from functions import scanFolder, synchronise, timeModified
 import datetime
 import pathlib
 import shutil
+import re
+
+source = '/home/l/Documents/repos/folder-sync/folder-sync/Source'
+replica = '/home/l/Documents/repos/folder-sync/folder-sync/Replica'
 
 # print(timeModified('/home/l/Documents/repos/folder-sync/folder-sync/Source/log.txt'))
 
 
+# scanFolder(source)
 
-# print(scanFolder('/home/l/Documents'))
-# print(timeModified('/home/l/Documents/repos/folder-sync/folder-sync/Source/log.txt'))
+synchronise(source , replica)
 
-# synchronise('/home/l/Documents/repos/folder-sync/folder-sync/Source', '/home/l/Documents/repos/folder-sync/folder-sync/Replica')
-
-print(scanFolder('/home/l/Documents/repos/folder-sync/folder-sync/Source'))
+# print(scanFolder('/home/l/Documents/repos/folder-sync/folder-sync/Source'))
 # print(x.keys())
 # folder = os.walk('/home/l/Documents/repos/folder-sync/folder-sync/Source')
 
@@ -23,4 +25,10 @@ print(scanFolder('/home/l/Documents/repos/folder-sync/folder-sync/Source'))
 #     print(y)
 #     print(z)
 #     print('**************8')
+
+# shutil.copytree('/home/l/Documents/repos/folder-sync/folder-sync/Source', '/home/l/Documents/repos/folder-sync/folder-sync/Replica')
+# temp = 
+# temp = source + '/Bookss/vice/test'
+# os.makedirs(source + '/Bookss/vice/test')
+# shutil.copy2(source + '/Bookss/2.txt', replica + '/Bookss/2.txt')
 
