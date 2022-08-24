@@ -2,6 +2,7 @@ import os
 import datetime
 import pathlib
 import shutil
+import re
 
 def timeModified(path):
 
@@ -18,9 +19,9 @@ def timeModified(path):
 def scanFolder(folder):
     content = {}
     for path, _, fileList in os.walk(folder):
-            for fileName in fileList:
-                time = str(timeModified(os.path.join(path, fileName)))
-                content[path] = [fileName, time]
+        for fileName in fileList:
+            time = str(timeModified(os.path.join(path, fileName)))
+            content[os.path.join(path, fileName)] = [fileName, time, path]
     return content
 
 
@@ -28,34 +29,78 @@ def synchronise(folderSource, folderReplica):
     
     contentSource = scanFolder(folderSource)
     contentReplica = scanFolder(folderReplica)
-    
+
+    # print(contentSource)
+
+    #Checking if the Source folder has any new files
     for filePathSource, dataSource in contentSource.items():
+        
+        fileNameSource = dataSource[0] # taking file name from content
+        dateModifiedSource = dataSource[1] # taking date modified from content
+        shortPathSource = dataSource[2]
         found = False
-        fileNameSource = dataSource[0]
-        dateModifiedSource = dataSource[1]
+
         for filePathReplica, dataReplica in contentReplica.items():
             fileNameReplica = dataReplica[0]
             dateModifiedReplica = dataReplica[1]
+            shortPathReplica = dataReplica[2]
+
             if(fileNameSource == fileNameReplica):
+                pass
                 found = True
-                if(dateModifiedSource != dateModifiedReplica):
-                    shutil.copy2(filePathSource, folderReplica)
+                if dateModifiedSource != dateModifiedReplica:
+                    extensionRegex = re.compile(r'(?<=Source).*$')
+                    extension = extensionRegex.findall(shortPathSource)
+                    try:
+                        os.makedirs(folderReplica + extension[0])
+                    except:
+                        pass
+                    shutil.copy2(filePathSource, folderReplica + extension[0])
+
+              
         if found == False:
-            shutil.copy2(filePathSource, folderReplica)
-            os.mkdir(folderReplica,'test')
+            extensionRegex = re.compile(r'(?<=Source).*$')
+            extension = extensionRegex.findall(shortPathSource)
+            print(extension)
+            try:
+                os.makedirs(folderReplica + extension[0])
+            except:
+                pass
+            shutil.copy2(filePathSource, folderReplica + extension[0])
+
+
+
+
+
+
     
-    contentReplica = scanFolder(folderReplica)
+    # for filePathSource, dataSource in contentSource.items():
+    #     found = False
+    #     fileNameSource = dataSource[0]
+    #     dateModifiedSource = dataSource[1]
+    #     for filePathReplica, dataReplica in contentReplica.items():
+    #         fileNameReplica = dataReplica[0]
+    #         dateModifiedReplica = dataReplica[1]
+    #         if(fileNameSource == fileNameReplica):
+    #             found = True
+    #             if(dateModifiedSource != dateModifiedReplica):
+    #                 shutil.copy2(os.path.join(filePathSource, fileNameSource), folderReplica)
+    #     if found == False:
+    #         shutil.copy2(os.path.join(filePathSource, fileNameSource), folderReplica)
+            
     
-    for filePathReplica, dataReplica in contentReplica.items():
-        fileNameReplica = dataReplica[0]
-        found = False
-        for dataSource in contentSource.values():
-            fileNameSource = dataSource[0]
-            if fileNameReplica == fileNameSource:
-                found = True
-                # print(found)
-        if found == False:
-            os.remove(filePathReplica)
+    # contentReplica = scanFolder(folderReplica)
+    
+    # for filePathReplica, dataReplica in contentReplica.items():
+    #     fileNameReplica = dataReplica[0]
+    #     found = False
+    #     for dataSource in contentSource.values():
+    #         fileNameSource = dataSource[0]
+    #         if fileNameReplica == fileNameSource:
+    #             found = True
+    #             # print(found)
+    #     if found == False:
+    #         os.remove(filePathReplica)
     
 
 
@@ -65,17 +110,6 @@ def synchronise(folderSource, folderReplica):
 
         
 
-###
-#Scan Source
-#Scan Replica
-#Take one file in source and check if it can be found in replica
-    #if it can be found in replica check if it has the same timestamp. 
-    #if it has the same timestamp do nothing
-    #if it has a different timestamp find file in replica and delete it then add file in source to replica
-    #if it can't be found in Replica add file from source to replica
-    #to check for deleted items we will look in replica and compare to Source. If we have a file in Replica that is not in source, we remove that file from replica
-    #maybe sort after last modified date. Save last modified date from latest sync iteration in a temp variable and only check until final . 
-###                 
 
 # #Function writes changes in log folder
 # def logFolder(folder):
