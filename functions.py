@@ -60,7 +60,10 @@ def synchronize(folderSource, folderReplica, logPath):
                         os.makedirs(folderReplica + extension[0])
                     except:
                         pass
-                    shutil.copy2(filePathSource, folderReplica + extension[0]) #shutil.copy2 method ensures file is copied along with metadata
+                    try:
+                        shutil.copy2(filePathSource, folderReplica + extension[0]) #shutil.copy2 method ensures file is copied along with metadata
+                    except:
+                        print("User is still modifying files. Please wait...")
                     message = str(datetime.datetime.now()) + ': ' + fileNameReplica + ' was modified in ' + folderReplica + extension[0]
                     print(message)
                     logFolder(logPath, message)
