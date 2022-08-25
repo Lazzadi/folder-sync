@@ -75,7 +75,7 @@ def synchronize(folderSource, folderReplica, logPath):
                 pass
             try:
                 shutil.copy2(filePathSource, folderReplica + extension[0])
-            except PermissionError: [Errno 13] Permission denied:
+            except:
                 print('User is modifying file while synchronization is taking place. Please wait')
 
             message = str(datetime.datetime.now()) + ': ' + fileNameSource + ' was created in ' + folderReplica + extension[0]
