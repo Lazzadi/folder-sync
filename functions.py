@@ -98,7 +98,10 @@ def synchronize(folderSource, folderReplica, logPath):
             if fileNameReplica == fileNameSource:
                 found = True
         if found == False:
-            os.remove(filePathReplica)
+            try:
+                os.remove(filePathReplica)
+            except:
+                print('User is modifying file while synchronization is taking place. Please wait')
             message = str(datetime.datetime.now()) + ': ' + fileNameReplica + ' was deleted from ' + filePathReplica
             print(message)
             logFolder(logPath, message)
