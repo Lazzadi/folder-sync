@@ -11,18 +11,10 @@ Requirements:
 
     • Folder paths, synchronization interval and log file path should be provided using the command line arguments.
 
-Latest version of script copies, modifies and deletes all files from Source folder, including those in subfolders. However, I still need to create the subfolders in the replica folder, which are not currently created. Maybe use recursion on any folder I find?? Or just call it a feature and move on.
+Program is called from command line/terminal and takes the following arguments:
+1. Source folder path
+2. Replica folder path
+3. Log folder path
+4. Synchronization interval (in seconds)
 
-Other TODO's can be found in the main file
-
-TODO Make regex applicable regardless of the name of the folder
-
-TODO: If we have a file in Replica that is not in source, we remove that file from replica
-
-TODO: maybe sort after last modified date. Save last modified date from latest sync iteration in a temp variable and only check until final .                
-
-TODO: Synchronise moving files internally
-
-    Maybe make a regex function to deal with that
-
-TODO: Synchronise creating empty folders. At the moment empty folders are not recreated in Replica but they will be created once empty folder is populated with a file
+e.g. python3 main.py [Source path] [Replica path] [Log path] [time]

@@ -13,9 +13,10 @@ def timeModified(path):
 
     # convert timestamp to dd-mm-yyyy hh:mm:ss
     time = datetime.datetime.fromtimestamp(timestamp)
+
     return(time)
 
-#Function should create a dictionary with Key:file-name, value:date modified
+#Function creates a dictionary with Key: file path, value: file name, time, file folder
 def scanFolder(folder):
     content = {}
     for path, _, fileList in os.walk(folder):
@@ -24,16 +25,19 @@ def scanFolder(folder):
             content[os.path.join(path, fileName)] = [fileName, time, path]
     return content
 
+# #Function writes changes in log folder
+def logFolder(path, message):
+    os.chdir(path)
+    log = open('log.txt', 'a')
+    log.write('\n' + message)
+    log.close()
 
-def synchronise(folderSource, folderReplica, logPath):
+def synchronize(folderSource, folderReplica, logPath):
     
     contentSource = scanFolder(folderSource)
     contentReplica = scanFolder(folderReplica)
 
-    # print(contentSource)
-
-    #Checking if the Source folder has any new files
-    for filePathSource, dataSource in contentSource.items():
+    for filePathSource, dataSource in contentSource.items(): #Checking if Source folder has any new files
         
         fileNameSource = dataSource[0] # taking file name from content
         dateModifiedSource = dataSource[1] # taking date modified from content
@@ -49,19 +53,19 @@ def synchronise(folderSource, folderReplica, logPath):
             if(fileNameSource == fileNameReplica):
                 pass
                 found = True
-                if dateModifiedSource != dateModifiedReplica:
-                    extensionRegex = re.compile(r'(?<=Source).*$')
+                if dateModifiedSource != dateModifiedReplica: #If file exists, we check if it was modified by checking the last time files were changed
+                    extensionRegex = re.compile(r'(?<=Source).*$') #Regex is used to create subfolder paths in the Replica folder
                     extension = extensionRegex.findall(shortPathSource)
                     try:
                         os.makedirs(folderReplica + extension[0])
                     except:
                         pass
-                    shutil.copy2(filePathSource, folderReplica + extension[0])
+                    shutil.copy2(filePathSource, folderReplica + extension[0]) #shutil.copy2 method ensures file is copied along with metadata
                     message = str(datetime.datetime.now()) + ': ' + fileNameReplica + ' was modified in ' + folderReplica + extension[0]
                     print(message)
                     logFolder(logPath, message)
 
-              
+        #If file is not found then it is created from scratch      
         if found == False:
             extensionRegex = re.compile(r'(?<=Source).*$')
             extension = extensionRegex.findall(shortPathSource)
@@ -78,7 +82,7 @@ def synchronise(folderSource, folderReplica, logPath):
     contentReplica = scanFolder(folderReplica)
     
 
-    #removes from replica files that are no longer in  source
+    #Loop checks for files in replica that are no longer in source and removes them
     for filePathReplica, dataReplica in contentReplica.items():
         fileNameReplica = dataReplica[0]
         found = False
@@ -91,15 +95,3 @@ def synchronise(folderSource, folderReplica, logPath):
             message = str(datetime.datetime.now()) + ': ' + fileNameReplica + ' was deleted from ' + filePathReplica
             print(message)
             logFolder(logPath, message)
-
-    #TODO: function that checks if files have been moved internally
-
-
-# #Function writes changes in log folder
-def logFolder(path, message):
-    os.chdir(path)
-    log = open('log.txt', 'a')
-    log.write('\n' + message)
-    log.close()
-
-
