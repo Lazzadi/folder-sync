@@ -18,4 +18,4 @@ Program is called from command line/terminal and takes the following arguments:
 4. Synchronization interval (in seconds)
 
 Paths should be in quotes
-e.g. python3 main.py [Source path] [Replica path] [Log path] [time]
+e.g. python3 main.py "Source path" "Replica path" "Log path" "time"
